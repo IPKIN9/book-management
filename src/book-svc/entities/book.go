@@ -1,8 +1,6 @@
-package entity
+package entities
 
-import (
-	"google.golang.org/protobuf/types/known/timestamppb"
-)
+import "google.golang.org/protobuf/types/known/timestamppb"
 
 type Book struct {
 	BookID        int64

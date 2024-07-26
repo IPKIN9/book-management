@@ -13,7 +13,6 @@ message Book {
     int64 category_id = 5;
     google.protobuf.Timestamp published_date = 6;
     string description = 7; 
-    int64 stock_id = 8;
     google.protobuf.Timestamp created_at = 9;
     google.protobuf.Timestamp updated_at = 10;
 }

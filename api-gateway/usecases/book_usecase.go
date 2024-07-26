@@ -28,7 +28,6 @@ func (u *bookUsecase) GetBook(ctx context.Context, id string) (*entity.Book, err
 	return &entity.Book{
 		BookID:        res.Book.BookId,
 		ISBN:          res.Book.Isbn,
-		StockID:       res.Book.StockId,
 		Title:         res.Book.Title,
 		AuthorID:      res.Book.AuthorId,
 		CategoryID:    res.Book.CategoryId,
