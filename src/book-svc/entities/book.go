@@ -1,6 +1,8 @@
 package entities
 
-import "google.golang.org/protobuf/types/known/timestamppb"
+import (
+	"time"
+)
 
 type Book struct {
 	BookID        int64
@@ -8,8 +10,8 @@ type Book struct {
 	ISBN          string
 	AuthorID      int64
 	CategoryID    int64
-	PublishedDate *timestamppb.Timestamp
+	PublishedDate *time.Time
 	Description   string
-	CreatedAt     *timestamppb.Timestamp
-	UpdatedAt     *timestamppb.Timestamp
+	CreatedAt     *time.Time
+	UpdatedAt     *time.Time
 }
