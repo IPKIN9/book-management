@@ -1,27 +1,30 @@
 syntax = "proto3";
 
 package book;
+option go_package = "https://github.com/IPKIN9/book-management/protos";
+
+import "google/protobuf/timestamp.proto";
 
 message Book {
-    string book_id = 1;
+    int64 book_id = 1;
     string title = 2;
     string isbn = 3;
-    string author_id = 4;
-    string category_id = 5;
-    string published_date = 6; 
+    int64 author_id = 4;
+    int64 category_id = 5;
+    google.protobuf.Timestamp published_date = 6;
     string description = 7; 
-    string stock_id = 8;
-    string created_at = 9;
-    string updated_at = 10; 
+    int64 stock_id = 8;
+    google.protobuf.Timestamp created_at = 9;
+    google.protobuf.Timestamp updated_at = 10;
 }
 
 message Stock {
-    string stock_id = 1;
-    string book_id = 2; 
+    int64 stock_id = 1;
+    int64 book_id = 2;
     int32 total_quantity = 3;
     int32 available_quantity = 4;
-    string created_at = 5;
-    string updated_at = 6;
+    google.protobuf.Timestamp created_at = 5;
+    google.protobuf.Timestamp updated_at = 6;
 }
 
 message GetBookRequest {
